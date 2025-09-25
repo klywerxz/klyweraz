@@ -1,0 +1,60 @@
+{# Это шаблон сайта #}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог </title>
+</head>
+<body>
+    {% block nav %}
+    </ul> <!-- Нумированный список-->
+    <li><a href="/">Главная</a></li><!-- Элемент списка-->
+    </ul>
+    {% endblock %}
+
+    {% block shop %}
+    </ul>
+    <li><a href="/shop">Личный кабинет</a></li>
+    </ul>
+    {% endblock %}
+
+    
+    {% block home %}
+    </ul>
+    <li><a href="/home">Вход/Регистрация</a></li>
+    </ul>
+    {% endblock %}
+
+     {% block basket %}
+
+    </ul>
+    <li><a href="/basket">Корзина</a></li>
+    </ul>
+    {% endblock %}
+
+    {% block services %}
+    </ul>
+    <li><a href="/services">Услуги</a></li>
+    </ul>
+    {% endblock %}
+
+    {% block contact %}
+    </ul>
+    <li><a href="/contact">Контакты</a></li>
+    </ul>
+    {% endblock %}
+
+    {% block about_the_company %}
+    </ul>
+    <li><a href="/about_the_company">О компании</a></li>
+    </ul>
+    {% endblock %}
+
+    {% block new_and_promotions %}
+    </ul>
+    <li><a href="/news_and_promotions">Новости и акции</a></li>
+    </ul>
+    {% endblock %}
+<body>
+</html>
