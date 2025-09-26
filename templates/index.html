@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Главная страница</title>
+</head>
+<body>
+<h1>Добро пожаловать в магазин одежды SoftGlow</h1>
+<div class="container mt-5">
+<div>
+</div>            
+    
+<div>
+    <img src="{{ url_for('static', filename='img/img.png') }}" alt="Рубашка" class="product-image" />
+        <form action="/add_to_cart" method="POST">
+          <input type="hidden" name="product_id" value="123"> <!-- ID товара -->
+          <button type="submit" class="btn btn-success">Добавить в корзину</button>
+      </form>
+      <h2 class="product-title">Рубашка</h2>
+      <p class="product-description">Товар очень красивый и удобный</p>
+      <p class="product-price">Цена: 1500 ₽</p>
+</div>
+<div>
+    <img src ="{{ url_for('static', filename='img/background.png') }}" alt="Свитшот" class="product-image" />
+        <form action="/add_to_cart" method="POST">
+          <input type="hidden" name="product_id" value="123"> <!-- ID товара -->
+          <button type="submit" class="btn btn-success">Добавить в корзину</button>
+      </form>
+      <h2 class="product-title">Свитшот</h2>
+      <p class="product-description">Мягкий свитшот и приятный материал, подойдет всем возрастам</p>
+      <p class="product-price">Цена: 2000 ₽</p>
+</div>
+<div>
+    <img src ="{{ url_for('static', filename='img/shirt.png') }}" alt="Кофта" class="product-image" />
+        <form action="/add_to_cart" method="POST">
+          <input type="hidden" name="product_id" value="123"> <!-- ID товара -->
+          <button type="submit" class="btn btn-success">Добавить в корзину</button>
+      </form>
+      <h2 class="product-title">Кофта</h2>
+      <p class="product-description">Красивая кофта, которая будет притягивать взгляды людей</p>
+      <p class="product-price">Цена: 2500 ₽</p>
+<div>
+    <img src ="{{ url_for('static', filename='img/skirt.png') }}" alt="Юбка" class="product-image" />
+          <form action="/add_to_cart" method="POST">
+          <input type="hidden" name="product_id" value="123"> <!-- ID товара -->
+          <button type="submit" class="btn btn-success">Добавить в корзину</button>
+      </form>
+      <h2 class="product-title">Юбка</h2>
+      <p class="product-description">Атласная юбка, которая изящно полчеркивает вашу фигуру</p>
+      <p class="product-price">Цена: 3199 ₽</p>
+</div>
+<div>
+    <img src ="{{ url_for('static', filename='img/shoes.png') }}" alt="Каблуки" class="product-image" />
+          <form action="/add_to_cart" method="POST">
+          <input type="hidden" name="product_id" value="123"> <!-- ID товара -->
+          <button type="submit" class="btn btn-success">Добавить в корзину</button>
+      </form>
+      <h2 class="product-title">Каблуки</h2>
+      <p class="product-description">Красивые каблучки, которые точно будут привлекать внимание остальных и выглядеть стильно</p>
+      <p class="product-price">Цена: 3399 ₽</p>
+</div>
+
+
+
+{% extends 'base.html' %}
+    {% block title %} Главная {% endblock %}
+    {% block content %}
+
+<style>
+  .product-card {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 50px;
+    padding: 16px;
+    margin: 10px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .product-image {
+    width: 100%;
+    height: auto;
+  }
+  .product-title {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  .product-price {
+    color: black;
+    font-weight: bold;
+  }
+</style>
+
+<!-- Сетка карточек товаров -->
+<div class="cards">
+  <!-- Карточка товара -->
+  <div class="card">
+    <!-- Карточка товара .. -->
+  </div>
+  <div class="card">
+    <!-- Карточка товара .. -->
+  </div>
+  <div class="card">
+    <!-- Карточка товара .. -->
+  </div>
+  <div class="card">
+    <!-- Карточка товара .. -->
+  </div>
+  <div class="card">
+    <!-- Карточка товара .. -->
+  </div>
+  <div class="card">
+    <!-- Карточка товара .. -->
+  </div>
+  <div class="card">
+    <!-- Карточка товара .. -->
+  </div>
+  <div class="card">
+    <!-- Карточка товара .. -->
+  </div>
+</div>
+
+{% endblock %}
+</body>
+</html>
